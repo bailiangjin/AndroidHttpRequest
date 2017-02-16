@@ -1,6 +1,6 @@
-package com.bailiangjin.httprequest.net.recognized;
+package com.bailiangjin.httprequest.net.okhttp;
 
-import com.bailiangjin.httprequest.interfaze.HttpCallback;
+import com.bailiangjin.httprequest.net.origin.HttpCallback;
 
 import java.io.IOException;
 

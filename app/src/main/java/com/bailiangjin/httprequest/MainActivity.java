@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.bailiangjin.httprequest.activity.OkHttpRequestActivity;
 import com.bailiangjin.httprequest.activity.OriginalRequestActivity;
+import com.bailiangjin.httprequest.activity.RxRetrofitOkHttpRequestActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,5 +21,9 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClick_OK(View view){
         OkHttpRequestActivity.start(MainActivity.this);
+    }
+
+    public void onClick_rx_ok(View view){
+        RxRetrofitOkHttpRequestActivity.start(MainActivity.this);
     }
 }

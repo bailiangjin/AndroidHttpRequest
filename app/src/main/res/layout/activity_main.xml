@@ -39,4 +39,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/btn_rx_ok"
+        android:text="RxOKHttp请求方式"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:onClick="onClick_rx_ok"
+        android:layout_below="@id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </RelativeLayout>

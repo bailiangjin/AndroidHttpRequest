@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.bailiangjin.httprequest.interfaze.HttpCallback;
-import com.bailiangjin.httprequest.net.recognized.OKHttpUtils;
+import com.bailiangjin.httprequest.net.origin.HttpCallback;
+import com.bailiangjin.httprequest.net.okhttp.OKHttpUtils;
 
 import java.io.IOException;
 
