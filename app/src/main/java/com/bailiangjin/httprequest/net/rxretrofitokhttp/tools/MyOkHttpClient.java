@@ -11,16 +11,18 @@ import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
+ *
+ * 最底层的 OKHttpClient
  * Created by bailiangjin on 2017/2/16.
  */
 
-public enum CommonOkHttpClient {
+public enum MyOkHttpClient {
 
     INSTANCE;
 
     private OkHttpClient okHttpClient;
 
-    CommonOkHttpClient() {
+    MyOkHttpClient() {
         okHttpClient = new OkHttpClient.Builder()
                 //.cache(cache)  //禁用okhttp自身的的缓存
                 .connectTimeout(10, TimeUnit.SECONDS)

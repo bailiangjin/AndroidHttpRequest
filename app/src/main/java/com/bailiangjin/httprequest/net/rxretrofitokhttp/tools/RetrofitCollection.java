@@ -6,16 +6,17 @@ import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
+ * Retrofit 集合 可以通过添加枚举元素的方式 方便地添加 不同 root url的 retrofit
  * @author bailiangjin 2017-02-16
  */
-public enum CommonRetrofitClient {
-    INSTANCE("http://www.weather.com.cn"),
-    INSTANCE2("http://www.weather");
+public enum RetrofitCollection {
+    WEATHER_INSTANCE("http://www.weather.com.cn"),
+    BAIDU_INSTANCE("http://www.kuaidi100.com");
     private Retrofit retrofit;
 
-    CommonRetrofitClient(String baseUrl) {
+    RetrofitCollection(String baseUrl) {
         retrofit = new Retrofit.Builder()
-                .client(CommonOkHttpClient.INSTANCE.getOkHttpClient())
+                .client(MyOkHttpClient.INSTANCE.getOkHttpClient())
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 //.addCallAdapterFactory(XywyCallAdapterFactory.create())

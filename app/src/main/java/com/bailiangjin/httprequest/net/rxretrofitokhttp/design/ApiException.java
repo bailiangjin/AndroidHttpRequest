@@ -2,6 +2,7 @@ package com.bailiangjin.httprequest.net.rxretrofitokhttp.design;
 
 /**
  * 统一异常处理 通用异常
+ * @author bailiangjin
  */
 public class ApiException extends RuntimeException {
 

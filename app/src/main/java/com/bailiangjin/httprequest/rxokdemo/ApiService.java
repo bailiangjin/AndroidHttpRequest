@@ -1,8 +1,9 @@
-package com.bailiangjin.httprequest.service;
+package com.bailiangjin.httprequest.rxokdemo;
 
 import com.bailiangjin.httprequest.net.rxretrofitokhttp.design.BaseData;
-import com.bailiangjin.httprequest.service.model.TestStrResult;
-import com.bailiangjin.httprequest.service.model.WeatherInfo;
+import com.bailiangjin.httprequest.rxokdemo.model.PostInfo;
+import com.bailiangjin.httprequest.rxokdemo.model.TestStrResult;
+import com.bailiangjin.httprequest.rxokdemo.model.WeatherInfo;
 
 import java.util.Map;
 
@@ -20,6 +21,9 @@ public interface ApiService {
 
     @GET("/data/sk/101091001.html")
     Observable<WeatherInfo> rxGetTest();
+
+    @GET("/query?type=yuantong&postid=200382770316")
+    Observable<PostInfo> rxGetPostInfo();
 
     @FormUrlEncoded
     @POST("/")

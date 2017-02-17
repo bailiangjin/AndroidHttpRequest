@@ -8,7 +8,7 @@ import rx.Subscriber;
  * Created by bailiangjin on 2017/2/16.
  */
 
-public abstract class CommonResponseSubscribe<T> extends Subscriber<T> {
+public abstract class CommonResponseSubscriber<T> extends Subscriber<T> {
     @Override
     public void onCompleted() {
 
@@ -20,6 +20,5 @@ public abstract class CommonResponseSubscribe<T> extends Subscriber<T> {
 
         ToastUtils.shortToast("异常提示:" + e.getMessage());
     }
-
 
 }

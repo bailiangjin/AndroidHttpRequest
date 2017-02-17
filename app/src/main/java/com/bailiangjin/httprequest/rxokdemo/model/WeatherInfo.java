@@ -1,4 +1,4 @@
-package com.bailiangjin.httprequest.service.model;
+package com.bailiangjin.httprequest.rxokdemo.model;
 
 /**
  * Created by bailiangjin on 2017/2/16.

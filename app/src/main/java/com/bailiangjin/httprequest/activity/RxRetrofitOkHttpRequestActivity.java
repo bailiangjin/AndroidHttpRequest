@@ -4,11 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
-import com.bailiangjin.httprequest.net.rxretrofitokhttp.design.CommonResponseSubscribe;
-import com.bailiangjin.httprequest.net.rxretrofitokhttp.tools.RxOkServiceProvider;
-import com.bailiangjin.httprequest.service.model.WeatherInfo;
+import com.bailiangjin.httprequest.net.rxretrofitokhttp.design.CommonResponseSubscriber;
+import com.bailiangjin.httprequest.rxokdemo.RxOkServiceProvider;
+import com.bailiangjin.httprequest.rxokdemo.model.PostInfo;
+import com.bailiangjin.httprequest.rxokdemo.model.WeatherInfo;
 import com.bailiangjin.httprequest.utils.GsonUtils;
 
 /**
@@ -35,10 +35,13 @@ public class RxRetrofitOkHttpRequestActivity extends AbsRequestActivity {
     @Override
     public void onClick_get(View view) {
         updateRequestData("Get请求方式", getRequestUrl);
-        RxOkServiceProvider.testGet(new CommonResponseSubscribe<WeatherInfo>() {
+        RxOkServiceProvider.testWeatherGet(new CommonResponseSubscriber<WeatherInfo>() {
             @Override
-            public void onNext(WeatherInfo testStrResultBaseData) {
-                Toast.makeText(RxRetrofitOkHttpRequestActivity.this, "get请求结束:" + GsonUtils.toJson(testStrResultBaseData), Toast.LENGTH_SHORT).show();
+            public void onNext(WeatherInfo weatherInfo) {
+                //Toast.makeText(RxRetrofitOkHttpRequestActivity.this, "get请求结束:" + GsonUtils.toJson(weatherInfo), Toast.LENGTH_SHORT).show();
+                String rst = null == weatherInfo ? null : GsonUtils.toJson(weatherInfo);
+                updateResponseData(rst);
+
             }
         });
 
@@ -46,19 +49,14 @@ public class RxRetrofitOkHttpRequestActivity extends AbsRequestActivity {
 
     @Override
     public void onClick_post(View view) {
-        updateRequestData("Post请求方式", getRequestUrl);
-        RxOkServiceProvider.testGet2(new CommonResponseSubscribe<WeatherInfo>() {
+        updateRequestData("Get请求方式", getRequestUrl);
+        RxOkServiceProvider.testPostGet(new CommonResponseSubscriber<PostInfo>() {
             @Override
-            public void onNext(WeatherInfo testStrResultBaseData) {
-                Toast.makeText(RxRetrofitOkHttpRequestActivity.this, "get请求结束2:" + GsonUtils.toJson(testStrResultBaseData), Toast.LENGTH_SHORT).show();
+            public void onNext(PostInfo postInfo) {
+                //Toast.makeText(RxRetrofitOkHttpRequestActivity.this, "get请求结束2:" +rst , Toast.LENGTH_SHORT).show();
+                String rst = null == postInfo ? null : GsonUtils.toJson(postInfo);
+                updateResponseData(rst);
             }
         });
-//        RxOkServiceProvider.testPost(new CommonResponseSubscribe<BaseData<TestStrResult>>() {
-//            @Override
-//            public void onNext(BaseData<TestStrResult> testStrResultBaseData) {
-//
-//            }
-//        });
-
     }
 }

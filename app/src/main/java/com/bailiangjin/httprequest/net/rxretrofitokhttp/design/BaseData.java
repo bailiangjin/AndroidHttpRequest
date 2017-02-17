@@ -2,6 +2,8 @@ package com.bailiangjin.httprequest.net.rxretrofitokhttp.design;
 
 /**
  * 数据返回的基类
+ *
+ * @author bailiangjin
  */
 public class BaseData<T> {
 

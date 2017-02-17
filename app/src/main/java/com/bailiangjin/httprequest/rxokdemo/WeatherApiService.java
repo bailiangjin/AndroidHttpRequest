@@ -1,6 +1,6 @@
-package com.bailiangjin.httprequest.net.rxretrofitokhttp.tools;
+package com.bailiangjin.httprequest.rxokdemo;
 
-import com.bailiangjin.httprequest.service.ApiService;
+import com.bailiangjin.httprequest.net.rxretrofitokhttp.tools.RetrofitCollection;
 
 import retrofit2.Retrofit;
 
@@ -8,12 +8,12 @@ import retrofit2.Retrofit;
  * Created by bailiangjin on 2017/2/16.
  */
 
-public enum CommonApiService2 {
+public enum WeatherApiService {
     INSTANCE;
     private ApiService apiService;
 
-    CommonApiService2() {
-        Retrofit retrofit = CommonRetrofitClient.INSTANCE2.getRetrofit();
+    WeatherApiService() {
+        Retrofit retrofit = RetrofitCollection.WEATHER_INSTANCE.getRetrofit();
         apiService = retrofit.create(ApiService.class);
     }
 
