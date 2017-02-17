@@ -18,10 +18,10 @@ import rx.Observable;
 
 public interface ApiService {
 
-    @GET("/data/sk/101091001.html")
+    @GET("data/sk/101091001.html")
     Observable<WeatherInfo> rxGetTest();
 
-    @GET("/query?type=yuantong&postid=200382770316")
+    @GET("query?type=yuantong&postid=200382770316")
     Observable<PostInfo> rxGetPostInfo();
 
     @FormUrlEncoded
