@@ -4,7 +4,6 @@ import com.bailiangjin.httprequest.net.rxretrofitokhttp.design.BaseData;
 import com.bailiangjin.httprequest.net.rxretrofitokhttp.design.CommonResponseSubscriber;
 import com.bailiangjin.httprequest.net.rxretrofitokhttp.tools.RxRequestHelper;
 import com.bailiangjin.httprequest.rxokdemo.model.PostInfo;
-import com.bailiangjin.httprequest.rxokdemo.model.TestStrResult;
 import com.bailiangjin.httprequest.rxokdemo.model.WeatherInfo;
 
 import java.util.HashMap;
@@ -55,14 +54,14 @@ public class RxOkServiceProvider {
         });
     }
 
-    public static void testPost(final Subscriber<BaseData<TestStrResult>> subscriber) {
+    public static void testPost(final Subscriber<BaseData<PostInfo>> subscriber) {
         Map<String, String> paramMap = new HashMap<>();
-        RxRequestHelper.requestDealCommonError(getWeatherApiService().rxPostTest(paramMap), new CommonResponseSubscriber<BaseData<TestStrResult>>() {
+        RxRequestHelper.requestDealCommonError(getWeatherApiService().rxPostTest(paramMap), new CommonResponseSubscriber<BaseData<PostInfo>>() {
 
             @Override
-            public void onNext(BaseData<TestStrResult> testStrResultBaseData) {
+            public void onNext(BaseData<PostInfo> postInfoBaseData) {
 
-                subscriber.onNext(testStrResultBaseData);
+                subscriber.onNext(postInfoBaseData);
             }
         });
     }

@@ -2,7 +2,6 @@ package com.bailiangjin.httprequest.rxokdemo;
 
 import com.bailiangjin.httprequest.net.rxretrofitokhttp.design.BaseData;
 import com.bailiangjin.httprequest.rxokdemo.model.PostInfo;
-import com.bailiangjin.httprequest.rxokdemo.model.TestStrResult;
 import com.bailiangjin.httprequest.rxokdemo.model.WeatherInfo;
 
 import java.util.Map;
@@ -27,7 +26,7 @@ public interface ApiService {
 
     @FormUrlEncoded
     @POST("/")
-    Observable<BaseData<TestStrResult>> rxPostTest(@FieldMap Map<String, String> map);
+    Observable<BaseData<PostInfo>> rxPostTest(@FieldMap Map<String, String> map);
 
 
 }
