@@ -14,7 +14,6 @@ import rx.schedulers.Schedulers;
 
 public class RxRequestHelper {
 
-
     /**
      * 绑定回调到mainthread 并统一处理异常
      * @param observable

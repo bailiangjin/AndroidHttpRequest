@@ -11,13 +11,18 @@ import retrofit2.Retrofit;
 public enum WeatherApiService {
     INSTANCE;
     private ApiService apiService;
+    private Retrofit retrofit;
 
     WeatherApiService() {
-        Retrofit retrofit = RetrofitCollection.WEATHER_INSTANCE.getRetrofit();
+        retrofit = RetrofitCollection.WEATHER_INSTANCE.getRetrofit();
         apiService = retrofit.create(ApiService.class);
     }
 
     public ApiService getApiService() {
         return apiService;
+    }
+
+    public String getBaseUrl() {
+        return retrofit.baseUrl().toString();
     }
 }

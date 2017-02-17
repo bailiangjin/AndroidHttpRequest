@@ -24,7 +24,7 @@ public class RxOkServiceProvider {
     }
 
     public static ApiService getPostApiService() {
-        return PostpiService.INSTANCE.getApiService();
+        return PostApiService.INSTANCE.getApiService();
     }
 
     public static void testWeatherGet(final Subscriber<WeatherInfo> subscriber) {
