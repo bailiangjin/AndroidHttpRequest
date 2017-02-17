@@ -19,11 +19,10 @@ public enum RetrofitCollection {
                 .client(MyOkHttpClient.INSTANCE.getOkHttpClient())
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
-                //.addCallAdapterFactory(XywyCallAdapterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                //也可以添加自定义的RxJavaCallAdapterFactory
                 .build();
     }
-
 
     public Retrofit getRetrofit() {
         return retrofit;

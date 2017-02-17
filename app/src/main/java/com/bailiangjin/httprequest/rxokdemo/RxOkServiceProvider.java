@@ -5,6 +5,7 @@ import com.bailiangjin.httprequest.net.rxretrofitokhttp.design.CommonResponseSub
 import com.bailiangjin.httprequest.net.rxretrofitokhttp.tools.RxRequestHelper;
 import com.bailiangjin.httprequest.rxokdemo.model.PostInfo;
 import com.bailiangjin.httprequest.rxokdemo.model.WeatherInfo;
+import com.bailiangjin.httprequest.utils.LogUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,14 +17,16 @@ import rx.Subscriber;
  * Created by bailiangjin on 2017/2/15.
  */
 
-public class RxOkServiceProvider {
+public class RxOkServiceProvider{
 
 
     public static ApiService getWeatherApiService() {
+        LogUtils.d("requestBaseUrl:"+WeatherApiService.INSTANCE.getBaseUrl());
         return WeatherApiService.INSTANCE.getApiService();
     }
 
     public static ApiService getPostApiService() {
+        LogUtils.d("requestBaseUrl:"+PostApiService.INSTANCE.getBaseUrl());
         return PostApiService.INSTANCE.getApiService();
     }
 
