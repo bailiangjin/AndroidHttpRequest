@@ -27,6 +27,9 @@
             android:screenOrientation="portrait"/>
 
         <activity android:name=".activity.RxRetrofitOkHttpRequestActivity"
+        android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.TestFileDownLoadAndUploadActivity"
             android:screenOrientation="portrait"/>
     </application>
 
