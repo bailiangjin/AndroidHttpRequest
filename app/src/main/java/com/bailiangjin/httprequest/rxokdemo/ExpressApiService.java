@@ -9,14 +9,14 @@ import retrofit2.Retrofit;
  * Created by bailiangjin on 2017/2/16.
  */
 
-public enum PostApiService {
+public enum ExpressApiService {
     INSTANCE;
     private ApiService apiService;
     private Retrofit retrofit;
 
 
-    PostApiService() {
-        retrofit = RetrofitCollection.BAIDU_INSTANCE.getRetrofit();
+    ExpressApiService() {
+        retrofit = RetrofitCollection.EXPRESS_INSTANCE.getRetrofit();
         apiService = retrofit.create(ApiService.class);
     }
 

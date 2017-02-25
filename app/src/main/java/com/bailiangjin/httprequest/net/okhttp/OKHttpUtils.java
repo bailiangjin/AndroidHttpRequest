@@ -1,7 +1,5 @@
 package com.bailiangjin.httprequest.net.okhttp;
 
-import com.bailiangjin.httprequest.net.origin.HttpCallback;
-
 import java.io.IOException;
 
 import okhttp3.Call;

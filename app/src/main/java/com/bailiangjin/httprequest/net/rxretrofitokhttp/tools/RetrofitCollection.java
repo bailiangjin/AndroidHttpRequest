@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public enum RetrofitCollection {
     WEATHER_INSTANCE("http://www.weather.com.cn/"),
-    BAIDU_INSTANCE("http://www.kuaidi100.com/");
+    EXPRESS_INSTANCE("http://www.kuaidi100.com/");
     private Retrofit retrofit;
 
     RetrofitCollection(String baseUrl) {

@@ -9,6 +9,7 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 /**
+ * 网络请求的RxHelper类 功能 1、将网络请求的回调绑定到主线程 2、进行统一的异常处理 可根据需要选择
  * Created by bailiangjin on 2017/2/16.
  */
 
@@ -62,7 +63,5 @@ public class RxRequestHelper {
     private static <T> void mapCommonErrors(Observable<BaseData<T>> observable) {
         observable.map(new CommonErrors<T>());
     }
-
-
 
 }

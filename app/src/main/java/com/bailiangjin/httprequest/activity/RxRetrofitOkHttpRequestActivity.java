@@ -12,14 +12,12 @@ import com.bailiangjin.httprequest.rxokdemo.model.WeatherInfo;
 import com.bailiangjin.httprequest.utils.GsonUtils;
 
 /**
+ * RxRetrofitOkHttp 结合的请求网络调用的示例 该示例仅展示了get方式请求 post方式与get无太大区别
  * Created by bailiangjin on 2017/2/14.
  */
 
 public class RxRetrofitOkHttpRequestActivity extends AbsRequestActivity {
 
-    protected String getRequestUrl = "http://www.baidu.com";
-    protected String postRequestUrl = getRequestUrl;
-    protected String postParamString = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +32,7 @@ public class RxRetrofitOkHttpRequestActivity extends AbsRequestActivity {
 
     @Override
     public void onClick_get(View view) {
-        updateRequestData("Get请求方式", getRequestUrl);
+        updateRequestData("Get请求方式", "");
         RxOkServiceProvider.testWeatherGet(new CommonResponseSubscriber<WeatherInfo>() {
             @Override
             public void onNext(WeatherInfo weatherInfo) {
@@ -44,13 +42,13 @@ public class RxRetrofitOkHttpRequestActivity extends AbsRequestActivity {
 
             }
         });
-
     }
 
     @Override
     public void onClick_post(View view) {
-        updateRequestData("Get请求方式", getRequestUrl);
-        RxOkServiceProvider.testPostGet(new CommonResponseSubscriber<PostInfo>() {
+        updateRequestData("Get请求方式", "");
+        //此处写的是测试获取快递信息的请求 调用方式为get
+        RxOkServiceProvider.testExpressGet(new CommonResponseSubscriber<PostInfo>() {
             @Override
             public void onNext(PostInfo postInfo) {
                 //Toast.makeText(RxRetrofitOkHttpRequestActivity.this, "get请求结束2:" +rst , Toast.LENGTH_SHORT).show();

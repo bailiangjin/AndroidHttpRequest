@@ -1,4 +1,4 @@
-package com.bailiangjin.httprequest.net.origin;
+package com.bailiangjin.httprequest.net.okhttp;
 
 public interface HttpCallback {
     /**
