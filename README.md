@@ -1,6 +1,6 @@
 # AndroidHttpRequest
-#Android网络请求总结范例
-##Android 网络请求推荐使用和发展历史
+# Android网络请求总结范例
+## Android 网络请求发展历史
 
 * 2.2之前：HttpClient
 
